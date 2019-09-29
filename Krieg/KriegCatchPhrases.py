@@ -1,0 +1,5 @@
+catchPhrases = [
+"KRIEG",
+"Krieg",
+"krieg",
+]
