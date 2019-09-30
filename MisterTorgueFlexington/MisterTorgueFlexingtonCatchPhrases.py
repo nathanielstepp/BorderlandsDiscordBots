@@ -17,4 +17,11 @@ catchPhrases = [
 'BOOM',
 'Boom',
 'boom',
+'air guitar',
+'guitar',
+'Guitar',
+'GUITAR',
+'Air guitar',
+'Air Guitar',
+'AIR GUITAR',
 ]
