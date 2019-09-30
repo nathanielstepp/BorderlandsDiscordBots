@@ -18,6 +18,7 @@ import discord
 from dotenv import load_dotenv
 from MisterTorgueFlexingtonCatchPhrases import catchPhrases
 from MisterTorgueFlexingtonQuotes import torgueQuotes
+from MisterTorgueFlexingtonPlays import torguePlaying
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
@@ -27,7 +28,7 @@ client = discord.Client()
 @client.event
 async def on_ready():
     print(f'{client.user.name} has connected to Discord!')
-    game = discord.Game("Air Guitar")
+    game = discord.Game(torguePlaying())
     await client.change_presence(status = discord.Status.online, activity = game);
 
 @client.event
