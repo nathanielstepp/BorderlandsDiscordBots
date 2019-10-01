@@ -1,19 +1,16 @@
 #Torgue discord.Game options
-
-# Might need to edit this with a timer,
-# so that it changes every few hours/days,
-# instead of just on initialization.
-
-
 import random
 
 def torguePlaying():
     game_options = ['Air Guitar',
-                    '1812 Overture with REAL CANNONS',
+                    'the 1812 Overture with REAL CANNONS',
                     'Splosion Man',
                     'Stardew Valley with C4 Mods',
-                    'Fantasy Unicorn Simulator',
-                    'P90X'
+                    'Unicorn Simulator',
+                    'P90X',
+                    'Explosive-ammo-only Left 4 Dead',
+                    'on a Samsung Galaxy S7',
+                    'Exploding Kittens'
                     ]
     return random.choice(game_options)
 

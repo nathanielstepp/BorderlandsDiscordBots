@@ -7,3 +7,6 @@ Discord Bot Creation:
 
 Discord Bot Hosting:
    - Create as Discord Bot on Your Rasberry Pi: https://www.gngrninja.com/code/2017/3/24/python-create-discord-bot-on-raspberry-pi
+
+Discord Python examples:
+    - https://github.com/Rapptz/discord.py/tree/async/examples
