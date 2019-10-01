@@ -42,12 +42,11 @@ async def on_message(message):
         await message.channel.send(response)
         
     elif message.content.startswith('BDE'):
-        await message.channel.send("WHAT DO YOU WANT ME TO MEASURE?!")
-        bde_item = await client.wait_for('message')
-        if bde_item.content == "EXPLOSIONS":
+        bde_item = message.content
+        if bde_item[4:] == "EXPLOSIONS":
             await message.channel.send("EXPLOSIONS ARE ALWAYS 100% BDE!!!!")
         else:
-            bde_response = "%s IS NO MORE THAN %d%% BDE MEEDLY MOOOOW-WOW-WOW" %(bde_item.content, random.randint(0, 100))
+            bde_response = "%s IS NO MORE THAN %d%% BDE MEEDLY MOOOOW-WOW-WOW" %(bde_item[4:], random.randint(0, 100))
             await message.channel.send(bde_response)
         
     elif message.content == 'raise-exception':
