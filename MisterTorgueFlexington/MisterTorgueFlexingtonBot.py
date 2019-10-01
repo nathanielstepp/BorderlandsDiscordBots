@@ -19,6 +19,7 @@ from dotenv import load_dotenv
 from MisterTorgueFlexingtonCatchPhrases import catchPhrases
 from MisterTorgueFlexingtonQuotes import torgueQuotes
 from MisterTorgueFlexingtonPlays import torguePlaying
+import asyncio
 
 load_dotenv()
 token = os.getenv('DISCORD_TOKEN')
@@ -42,4 +43,12 @@ async def on_message(message):
     elif message.content == 'raise-exception':
         raise discord.DiscordException
 
+async def my_background_task():
+    await client.wait_until_ready()
+    while not client.is_closed():
+        game = discord.Game(torguePlaying())
+        await client.change_presence(status = discord.Status.online, activity = game);
+        await asyncio.sleep(14400)      #4 hours
+
+client.loop.create_task(my_background_task())
 client.run(token)
