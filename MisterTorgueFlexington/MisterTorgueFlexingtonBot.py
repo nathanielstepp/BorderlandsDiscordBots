@@ -36,10 +36,20 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-	
+    
     if any(x in message.content for x in catchPhrases):
         response = random.choice(torgueQuotes)
         await message.channel.send(response)
+        
+    elif message.content.startswith('BDE'):
+        await message.channel.send("WHAT DO YOU WANT ME TO MEASURE?!")
+        bde_item = await client.wait_for('message')
+        if bde_item.content == "EXPLOSIONS":
+            await message.channel.send("EXPLOSIONS ARE ALWAYS 100% BDE!!!!")
+        else:
+            bde_response = "%s IS NO MORE THAN %d%% BDE MEEDLY MOOOOW-WOW-WOW" %(bde_item.content, random.randint(0, 100))
+            await message.channel.send(bde_response)
+        
     elif message.content == 'raise-exception':
         raise discord.DiscordException
 
@@ -49,6 +59,6 @@ async def my_background_task():
         game = discord.Game(torguePlaying())
         await client.change_presence(status = discord.Status.online, activity = game);
         await asyncio.sleep(14400)      #4 hours
-
+        
 client.loop.create_task(my_background_task())
 client.run(token)
