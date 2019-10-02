@@ -34,19 +34,20 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
+    message_upper = (message.content).upper()
     if message.author == client.user:
-        return
+        return 
     
-    if any(x in message.content for x in catchPhrases):
+    if any(x in message_upper for x in catchPhrases):
         response = random.choice(torgueQuotes)
         await message.channel.send(response)
         
-    elif message.content.startswith('BDE'):
+    elif message_upper.startswith('BDE'):
         bde_item = message.content
         if bde_item[4:] == "EXPLOSIONS":
             await message.channel.send("EXPLOSIONS ARE ALWAYS 100% BDE!!!!")
         else:
-            bde_response = "%s IS NO MORE THAN %d%% BDE MEEDLY MOOOOW-WOW-WOW" %(bde_item[4:], random.randint(0, 100))
+            bde_response = "%s IS NO MORE THAN %d%% Big D*ck Energy MEEDLY MOOOOW-WOW-WOW" %(bde_item[4:], random.randint(0, 100))
             await message.channel.send(bde_response)
         
     elif message.content == 'raise-exception':
