@@ -1,4 +1,7 @@
-General:
+GIT Tutorial Links:
+   - What is GIT: https://backlog.com/git-tutorial/what-is-git/
+
+General Discord Bot Development:
    - discord.py Library Reference: https://discordpy.readthedocs.io/en/latest/index.html
    - Discord Bots List: https://discordbots.org
 
@@ -9,4 +12,4 @@ Discord Bot Hosting:
    - Create as Discord Bot on Your Rasberry Pi: https://www.gngrninja.com/code/2017/3/24/python-create-discord-bot-on-raspberry-pi
 
 Discord Python examples:
-    - https://github.com/Rapptz/discord.py/tree/async/examples
+   - discord.py Async Usage Examples: https://github.com/Rapptz/discord.py/tree/async/examples
