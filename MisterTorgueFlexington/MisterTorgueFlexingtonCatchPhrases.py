@@ -5,5 +5,6 @@ catchPhrases = [
 'EXPLODING',
 'GUITAR',
 'AIR GUITAR',
-'EXPLOSIONS'
+'EXPLOSIONS',
+'BOOM'
 ]
